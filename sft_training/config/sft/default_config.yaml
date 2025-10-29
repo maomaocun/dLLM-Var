@@ -1,0 +1,23 @@
+model_name: "/path/to/LLaDA-8B-Base"    # 预训练模型名称
+local_batch_size: 2                        # 训练批次大小
+max_length: 8192                           # 分词最大长度
+# num_epochs: 20                             # 训练轮数
+max_steps: 2000000                         # 最大训练步数
+avg_token_len: 380                        # 预估平均样本长度，用于动态批次采样
+learning_rate: 2.5e-5                        # 优化器学习率
+warmup_steps: 50                        # 学习率预热步数
+grad_accum_steps: 4                        # 梯度累积步数
+output_dir: "./sft_save"                   # 模型与日志保存目录
+job_name: "llada-block-diffusion-training"                      # 任务名称
+train_data: "path/to/your/train_data_fold"  # 训练数据路径 *.jsonl
+max_grad_norm: 1.0                         # 梯度裁剪阈值
+weight_decay: 0.1                          # 权重衰减
+evaluation_strategy: "steps"               # 评估策略
+eval_steps: 1000                            # 评估步数
+logging_steps: 1                          # 日志记录步数
+save_steps: 4000                            # 保存步数
+save_total_limit: 10                       # 最大保存检查点数量
+load_best_model_at_end: true              # 训练结束时加载最佳模型
+bf16: true                                 # 使用bfloat16精度
+report_to: "tensorboard"                   # 报告工具，在配置完成 wandb 之后，可选"wandb"
+remove_unused_columns: false               # 是否移除未使用的列

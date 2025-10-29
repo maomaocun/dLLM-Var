@@ -1,0 +1,9 @@
+rank: 32                # LoRA 的秩（r）
+lora_alpha: 256         # LoRA alpha
+target_modules:         # 需要注入LoRA的模块
+  - q_proj
+  - k_proj
+  - v_proj
+lora_dropout: 0.05      # LoRA dropout 概率
+bias: "none"            # 是否训练 bias
+task_type: "CAUSAL_LM"  # 任务类型

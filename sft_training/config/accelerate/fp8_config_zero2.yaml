@@ -1,0 +1,50 @@
+distributed_type: DEEPSPEED
+mixed_precision: "fp8"
+downcast_bf16: 'no'
+fp8_config:
+  backend: TE # Can be TE | MS-AMP
+  # The following are TE specific arguments.
+  # See https://docs.nvidia.com/deeplearning/transformer-engine/user-guide/api/common.html#common-api for more details
+  amax_history_len: 1024
+  fp8_format: E4M3
+  interval: 1
+  margin: 0
+  override_linear_precision: [false, false, false]
+  # Generally this should always be set to `false` to have the most realistic fp8 eval performance
+  use_autocast_during_eval: false
+  # If using MS-AMP, we ignore all of the prior and set a opt_level
+  #opt_level: O1
+deepspeed_config:
+  bf16:
+    enabled: "auto"
+  optimizer:
+    type: "AdamW"
+    params:
+      lr: "auto"
+      betas: "auto"
+      eps: "auto"
+      weight_decay: "auto"
+  scheduler:
+    type: "WarmupLR"
+    params:
+      warmup_min_lr: 1.0e-06
+      warmup_max_lr: 1.0e-05
+      warmup_num_steps: 50
+  zero_optimization:
+    stage: 2
+    offload_optimizer:
+      device: "none"
+      pin_memory: true
+    allgather_partitions: true
+    allgather_bucket_size: "auto"
+    overlap_comm: true
+    reduce_scatter: true
+    reduce_bucket_size: "auto"
+    contiguous_gradients: true
+  gradient_accumulation_steps: 4
+  gradient_clipping: "auto"
+  steps_per_print: "auto"
+  train_batch_size: "auto"
+  train_micro_batch_size_per_gpu: "auto"
+  wall_clock_breakdown: false
+  deepspeed_multinode_launcher: "standard"
