@@ -48,7 +48,7 @@ demo_dLLM-var.py
 cd datset
 python transfer_text2token.py --input_dir "path/to/your/input/jsonl/folder" --output_file "path/to/your/output/tokenized.jsonl" --tokenizer_model "path/to/your/LLaDA-8B-Base"
 ```
-For detailed dataset format, see `/sft_training/data/dataset.py`.
+For detailed dataset format, see ` ./sft_training/data/dataset.py`.
 
 ### Training Script
 Training uses DeepSpeed ZeRO-2 and supports multi-GPU. Example command:
