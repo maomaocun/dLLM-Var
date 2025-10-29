@@ -2,13 +2,14 @@
 
 # dLLM-Var: Diffusion LLM with Native Variable Generation Lengths: Let [EOS] Lead the Way
 
-[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-maomaocun%2FdLLM--Var-green)](https://huggingface.co/maomaocun/dLLM-Var) [![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
+[![arXiv](https://img.shields.io/badge/Paper-arXiv-red.svg)](https://arxiv.org/abs/2510.24605)
+[![Hugging Face](https://img.shields.io/badge/dLLM--Var-green)](https://huggingface.co/maomaocun/dLLM-Var) [![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 
 Yicun Yang<sup>1 *</sup>, Cong Wang<sup>1</sup>, Shaobo Wang<sup>1</sup>, Zichen Wen<sup>1</sup>, Biqing Qi<sup>2</sup>, Hanlin Xu<sup>3</sup>, Linfeng Zhang<sup>1 †</sup>
 
 <sup>1</sup>Shanghai Jiao Tong University, <sup>2</sup>Shanghai AI Lab, <sup>3</sup>Huawei
 
-[Paper](https://arxiv.org/abs/2510.24605) | [Hugging Face Model](https://huggingface.co/maomaocun/dLLM-Var)
+
 
 </div>
 
@@ -16,7 +17,7 @@ Yicun Yang<sup>1 *</sup>, Cong Wang<sup>1</sup>, Shaobo Wang<sup>1</sup>, Zichen
 - **Native Variable-Length Generation**: Guided by the [EOS] token, it supports arbitrary length output without fixed hyperparameters.
 - **High Parallelism**: Inherits the bidirectional attention of dLLM, supporting blockwise diffusion inference.
 - **KV Cache Compatible**: Seamlessly reuses the KV cache, avoiding complex designs and improving efficiency.
-- **Self-Correction Capability**: The full attention mechanism allows subsequent blocks to edit and correct previously generated ones.
+
 
 <div align="center">
 <img src="assets/overview.png" alt="Overview" width="800" />
