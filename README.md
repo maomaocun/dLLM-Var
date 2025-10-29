@@ -25,7 +25,7 @@ Affiliations: <sup>1</sup>Shanghai Jiao Tong University, <sup>2</sup>Shanghai AI
 - Python 3.12
 - PyTorch 2.5+ (H-series GPUs support FP8 mixed precision)
 - DeepSpeed (for training)
-- Transformers, Datasets, and other Hugging Face libraries
+- Transformers, Datasets
 
 ### Quick Installation
 ```bash
