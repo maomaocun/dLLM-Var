@@ -1,12 +1,16 @@
-# dLLM-Var: Diffusion LLM with Native Variable Generation Lengths
+<div align="center">
+
+# dLLM-Var: Diffusion LLM with Native Variable Generation Lengths: Let [EOS] Lead the Way
+
 [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-maomaocun%2FdLLM--Var-green)](https://huggingface.co/maomaocun/dLLM-Var) [![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 
-**Diffusion LLM with Native Variable Generation Lengths: Let [EOS] Lead the Way**
+Yicun Yang<sup>1 *</sup>, Cong Wang<sup>1</sup>, Shaobo Wang<sup>1</sup>, Zichen Wen<sup>1</sup>, Biqing Qi<sup>2</sup>, Hanlin Xu<sup>3</sup>, Linfeng Zhang<sup>1 †</sup>
 
-Authors: Yicun Yang<sup>1 *</sup>, Cong Wang<sup>1</sup>, Shaobo Wang<sup>1</sup>, Zichen Wen<sup>1</sup>, Biqing Qi<sup>2</sup>, Hanlin Xu<sup>3</sup>, Linfeng Zhang<sup>1 †</sup>  
-Affiliations: <sup>1</sup>Shanghai Jiao Tong University, <sup>2</sup>Shanghai AI Lab, <sup>3</sup>Huawei  
+<sup>1</sup>Shanghai Jiao Tong University, <sup>2</sup>Shanghai AI Lab, <sup>3</sup>Huawei
 
 [Paper](https://arxiv.org/abs/2510.24605) | [Hugging Face Model](https://huggingface.co/maomaocun/dLLM-Var)
+
+</div>
 
 ### Key Features
 - **Native Variable-Length Generation**: Guided by the [EOS] token, it supports arbitrary length output without fixed hyperparameters.
@@ -24,8 +28,7 @@ Affiliations: <sup>1</sup>Shanghai Jiao Tong University, <sup>2</sup>Shanghai AI
 ### Requirements
 - Python 3.12
 - PyTorch 2.5+ (H-series GPUs support FP8 mixed precision)
-- DeepSpeed (for training)
-- Transformers, Datasets
+
 
 ### Quick Installation
 ```bash
