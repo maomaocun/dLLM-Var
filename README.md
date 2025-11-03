@@ -43,6 +43,13 @@ bash install.sh
 ```python
 demo_dLLM-var.py
 ```
+
+### Evaluation
+```python
+cd ./evaluation
+bash run_batch.sh
+```
+You need to change the environment variables
 ### Prepare Dataset
 ```python
 cd datset

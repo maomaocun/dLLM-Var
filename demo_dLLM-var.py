@@ -20,8 +20,8 @@ result = model.generate(
     max_gen_length=1024,
     block_length=64,
     threshold=0.9,
-    streaming=True,
     eos_token_id=126348 
 )
 text = tokenizer.batch_decode(result, skip_special_tokens=True)
-print(text)
+print(messages[0]['content']+"\n"+text[0])
+
