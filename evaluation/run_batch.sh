@@ -5,5 +5,5 @@ export ENABLE_EDITING=False # the model now ((2025.11.3) released does not suppo
 export THRESHOLD=0.9
 export PRETRAINED_PATH=\path\to\dLLM-Var
 export BATCH_SIZE=1
-bash /mnt/innovator/code/yangyicun/dLLM-Pro/evaluation/run_eval_block_diffusion_template.sh
+bash run_eval_block_diffusion_template.sh
 
