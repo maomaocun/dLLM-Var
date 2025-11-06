@@ -42,8 +42,6 @@ def prefill_phase(model, input_ids,block_length):
 
 
 
-
-
 def unmask_function(logits,block_x,mask_id,delete_id=None,insert_id=None,remasking='low_confidence',temperature=0.0,threshold=0.9,
 top_p=0.95,top_k=10,enable_editing=False,token_per_steps=4):
     assert delete_id is not None and insert_id is not None

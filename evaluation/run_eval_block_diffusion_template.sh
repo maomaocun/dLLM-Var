@@ -33,7 +33,6 @@ accelerate launch --config_file accelerate_config.yaml  evaluation_script.py -m 
 --log_samples \
 --confirm_run_unsafe_code \
 --trust_remote_code \
---apply_chat_template \
 
 
 
